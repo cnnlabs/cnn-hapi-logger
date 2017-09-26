@@ -12,7 +12,9 @@
     "generate-docs": "rm -rf docs && esdoc -c .esdoc.json",
     "test": "eslint . && test/validate-json-files.sh",
     "update-apply": "ncu -u",
-    "update-check": "ncu"
+    "update-check": "ncu",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "homepage": "",
   "engines": {
@@ -25,7 +27,8 @@
     "inert": "^4.0.0",
     "joi": "8.1.0",
     "querystring": "0.2.0",
-    "vision": "^4.1.0"
+    "vision": "^4.1.0",
+    "snyk": "^1.41.1"
   },
   "devDependencies": {
     "changelog-maker": "2.2.3",
@@ -38,5 +41,6 @@
     "cnn",
     "cnnlabs"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "snyk": true
 }
